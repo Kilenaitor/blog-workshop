@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Kyle's Blog</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.min.css" type="text/css" media="screen">
+        {% block stylesheets %}
+            {% stylesheets 'bundles/blogmain/css/*' filter='cssrewrite' %}
+	            <link rel="stylesheet" href="{{ asset_url }}"  type="text/css" media="screen">
+            {% endstylesheets %}
+        {% endblock %}
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    <body id="main">
+        <div class="sticky">
+            <nav class="top-bar" data-topbar role="navigation" data-option="sticky_on: large">
+              <ul class="title-area">
+                <li class="name">
+                  <h1><a href="#">Kyle Minshall</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+              </ul>
+
+              <section class="top-bar-section">
+                <!-- Left Nav Section -->
+                <ul class="left">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                </ul>
+              </section>
+            </nav>
+        </div>
+        <div id="wrapper">
+            <div class="row fullwidth">
+                <div id="content" class="small-12 medium-12 large-9 columns">
+                    <div id="post_3" class="post">
+                        <div class="date">
+                            <span class="day">21</span><br>
+                            <span class="month">Apr</span>
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h1 class="title">Workshops</h1>
+                                <h3>Why they're so amazingly important</h3>
+                                <h6 class="subheader">
+                                    By Kyle Minshall
+                                </h6>
+                            </div>
+                            <hr>
+                            <div class="article">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse consequat justo sed lobortis aliquet.
+                                    Quisque feugiat sed ante non vulputate. Donec tempus ante nec dui scelerisque ornare.
+                                    Vestibulum at eros a mauris facilisis lacinia in quis tortor. Maecenas ac scelerisque augue.
+                                    Praesent ut aliquet leo, eu porta enim. Duis lacinia dapibus purus, quis convallis enim sodales quis.
+                                    Integer ac leo vitae urna fringilla cursus. Nullam luctus, libero et condimentum vestibulum,
+                                    eros est facilisis urna, vel luctus augue urna id erat.
+                                </p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div id="post_2" class="post">
+                        <div class="date">
+                            <span class="day">20</span><br>
+                            <span class="month">Apr</span>
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h1 class="title">Web Development</h1>
+                                <h3>By FAR the best field in all of software engineering!</h3>
+                                <h6 class="subheader author">
+                                    By Kyle Minshall
+                                </h6>
+                            </div>
+                            <hr>
+                            <div class="article">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse consequat justo sed lobortis aliquet.
+                                    Quisque feugiat sed ante non vulputate. Donec tempus ante nec dui scelerisque ornare.
+                                    Vestibulum at eros a mauris facilisis lacinia in quis tortor. Maecenas ac scelerisque augue.
+                                    Praesent ut aliquet leo, eu porta enim. Duis lacinia dapibus purus, quis convallis enim sodales quis.
+                                    Integer ac leo vitae urna fringilla cursus. Nullam luctus, libero et condimentum vestibulum,
+                                    eros est facilisis urna, vel luctus augue urna id erat.
+                                </p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div id="post_1" class="post">
+                        <div class="date">
+                            <span class="day">30</span><br>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h1 class="title">Social Networking</h1>
+                                <h3>If you're reading this now, you're already too late.</h3>
+                                <h6 class="subheader author">
+                                    By Kyle Minshall
+                                </h6>
+                            </div>
+                            <hr>
+                            <div class="article">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse consequat justo sed lobortis aliquet.
+                                    Quisque feugiat sed ante non vulputate. Donec tempus ante nec dui scelerisque ornare.
+                                    Vestibulum at eros a mauris facilisis lacinia in quis tortor. Maecenas ac scelerisque augue.
+                                    Praesent ut aliquet leo, eu porta enim. Duis lacinia dapibus purus, quis convallis enim sodales quis.
+                                    Integer ac leo vitae urna fringilla cursus. Nullam luctus, libero et condimentum vestibulum,
+                                    eros est facilisis urna, vel luctus augue urna id erat.
+                                </p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebar" class="large-3 columns show-for-xlarge-large-only">
+                    <div class="tile">
+                        <img id="logo" src="images/logo.png">
+                        <div id="description">
+                            <h1>Kyle Minshall</h1><br>
+                            <h4 class="subheader">@Kilenaitor</h4>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div id="description">
+                            <h2>Recent Posts</h2><br>
+                            <span>Nothing here!</span>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div id="description">
+                            <h2>Awesome Posts</h2><br>
+                            <span>All of them.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <javascript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
+        <script type="text/javascript">
+            $(document).foundation()
+        </script>
+    </javascript>
+</html>

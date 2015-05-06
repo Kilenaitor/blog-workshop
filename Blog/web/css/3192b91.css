@@ -1,0 +1,82 @@
+body, html {
+width: 100%;
+height: 100%;
+}
+
+body {
+    background-color: #E9EAED;
+}
+
+.fullwidth {
+width: 90%;
+       margin-left: auto;
+       margin-right: auto;
+       max-width: initial;
+}
+
+.post {
+padding: 40px;
+position: relative;
+}
+
+.content {
+    background-color: #fff;
+padding: 40px;
+}
+
+.shadow {
+    box-shadow: 0 0 5px #BBB;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.date {
+display: block;
+position: absolute;
+left: -10px;
+top: 70px;
+     line-height: 14pt;
+     background-color: #333333;
+color: #fff;
+width: 80px;
+height: 80px;
+        text-align: center;
+padding: 20px;
+         border-radius: 50%;
+}
+
+.day {
+    font-size: 32px;
+}
+
+.month {
+    font-size: 14px;
+}
+
+#sidebar {
+padding: 40px 0;
+}
+
+.tile {
+display: block;
+         margin-right: auto;
+         margin-left: auto;
+padding: 30px;
+         margin-bottom: 40px;
+         background-color: #FFF;
+}
+
+#description {
+    text-align: center;
+}
+
+#logo {
+display: block;
+         margin-left: auto;
+         margin-right: auto;
+height: 200px;
+width: auto;
+}
+
