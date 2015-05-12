@@ -1,3 +1,11 @@
-blog_main_homepage:
-    path:     /
+blog_homepage:
+    path:   /
     defaults: { _controller: BlogMainBundle:Default:index }
+
+admin_page:
+    path:   /admin
+    defaults: { _controller: BlogMainBundle:Default:admin }
+    
+login_page:
+    path:   /login
+    defaults: { _controller: BlogMainBundle:Default:login }

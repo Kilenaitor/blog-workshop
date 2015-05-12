@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Submit Post</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.min.css" type="text/css" media="screen">
+        {% block stylesheets %}
+            {% stylesheets 'bundles/blogmain/css/*' filter='cssrewrite' %}
+	            <link rel="stylesheet" href="{{ asset_url }}"  type="text/css" media="screen">
+            {% endstylesheets %}
+        {% endblock %}
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    <body id="main">
+        <div id="wrapper">
+            <div class="row fullwidth">
+                <div class="large-5 large-centered columns">
+                    <div class="login-wrapper">
+                        <div class="login-box">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <form action="" method="POST">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <label>Post Title
+                                                    <input type="text" name="title" placeholder="Hamlet" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                              <label>Post Content
+                                                <textarea name="content" placeholder="To be or not to be..." rows="15"></textarea>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        <div class="row">
+                                            <div class="large-12 large-centered columns">
+                                                <input type="submit" class="button expand" value="Post"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            {% block status %}
+                                {% if status is defined %} <h6 class="error">{{ status }}</h6> {% endif %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <javascript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
+        <script type="text/javascript">
+            $(document).foundation()
+        </script>
+    </javascript>
+</html>

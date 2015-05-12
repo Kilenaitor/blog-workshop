@@ -33,90 +33,29 @@
         <div id="wrapper">
             <div class="row fullwidth">
                 <div id="content" class="small-12 medium-12 large-9 columns">
-                    <div id="post_3" class="post">
-                        <div class="date">
-                            <span class="day">21</span><br>
-                            <span class="month">Apr</span>
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <h1 class="title">Workshops</h1>
-                                <h3>Why they're so amazingly important</h3>
-                                <h6 class="subheader">
-                                    By Kyle Minshall
-                                </h6>
+                    {% for post in posts %}
+                        <div id="post_{{ loop.revindex}}" class="post">
+                            <div class="date">
+                                <span class="day">{{ post.date|date("d") }}</span><br>
+                                <span class="month">{{ post.date|date("F") }}</span>
                             </div>
-                            <hr>
-                            <div class="article">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Suspendisse consequat justo sed lobortis aliquet.
-                                    Quisque feugiat sed ante non vulputate. Donec tempus ante nec dui scelerisque ornare.
-                                    Vestibulum at eros a mauris facilisis lacinia in quis tortor. Maecenas ac scelerisque augue.
-                                    Praesent ut aliquet leo, eu porta enim. Duis lacinia dapibus purus, quis convallis enim sodales quis.
-                                    Integer ac leo vitae urna fringilla cursus. Nullam luctus, libero et condimentum vestibulum,
-                                    eros est facilisis urna, vel luctus augue urna id erat.
-                                </p>
+                            <div class="content">
+                                <div class="title">
+                                    <h1 class="title">{{ post.title }}</h1>
+                                    <h6 class="subheader author">
+                                        By Kyle Minshall
+                                    </h6>
+                                </div>
+                                <hr>
+                                <div class="article">
+                                    <p>
+                                        {{ post.content }}
+                                    </p>
+                                </div>
+                                <hr>
                             </div>
-                            <hr>
                         </div>
-                    </div>
-                    <div id="post_2" class="post">
-                        <div class="date">
-                            <span class="day">20</span><br>
-                            <span class="month">Apr</span>
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <h1 class="title">Web Development</h1>
-                                <h3>By FAR the best field in all of software engineering!</h3>
-                                <h6 class="subheader author">
-                                    By Kyle Minshall
-                                </h6>
-                            </div>
-                            <hr>
-                            <div class="article">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Suspendisse consequat justo sed lobortis aliquet.
-                                    Quisque feugiat sed ante non vulputate. Donec tempus ante nec dui scelerisque ornare.
-                                    Vestibulum at eros a mauris facilisis lacinia in quis tortor. Maecenas ac scelerisque augue.
-                                    Praesent ut aliquet leo, eu porta enim. Duis lacinia dapibus purus, quis convallis enim sodales quis.
-                                    Integer ac leo vitae urna fringilla cursus. Nullam luctus, libero et condimentum vestibulum,
-                                    eros est facilisis urna, vel luctus augue urna id erat.
-                                </p>
-                            </div>
-                            <hr>
-                        </div>
-                    </div>
-                    <div id="post_1" class="post">
-                        <div class="date">
-                            <span class="day">30</span><br>
-                            <span class="month">Mar</span>
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <h1 class="title">Social Networking</h1>
-                                <h3>If you're reading this now, you're already too late.</h3>
-                                <h6 class="subheader author">
-                                    By Kyle Minshall
-                                </h6>
-                            </div>
-                            <hr>
-                            <div class="article">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Suspendisse consequat justo sed lobortis aliquet.
-                                    Quisque feugiat sed ante non vulputate. Donec tempus ante nec dui scelerisque ornare.
-                                    Vestibulum at eros a mauris facilisis lacinia in quis tortor. Maecenas ac scelerisque augue.
-                                    Praesent ut aliquet leo, eu porta enim. Duis lacinia dapibus purus, quis convallis enim sodales quis.
-                                    Integer ac leo vitae urna fringilla cursus. Nullam luctus, libero et condimentum vestibulum,
-                                    eros est facilisis urna, vel luctus augue urna id erat.
-                                </p>
-                            </div>
-                            <hr>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div id="sidebar" class="large-3 columns show-for-xlarge-large-only">
                     <div class="tile">
